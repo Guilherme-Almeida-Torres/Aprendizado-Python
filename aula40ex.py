@@ -4,13 +4,23 @@ while True:
 
     numero_1 = input('Digite um numero: ')
     numero_2 = input('Digite outro numero: ')
+    pergunta = input('Qual conta vc quer: ').lower()
 
-    numero_1_int = float(numero_1)
-    numero_2_int = float(numero_2)
+    numeros_validos = None
+    
+    try:
+        numero_1_int = float(numero_1)
+        numero_2_int = float(numero_2)
+        numeros_validos = True
+    except:
+        numeros_validos = None
+        
+    if numeros_validos is None:
+        print('Um ou os dois valores digitados são invalidos')
+        continue
 
     if numero_1.isdigit() and numero_2.isdigit():
 
-        pergunta = input('Qual conta vc quer: ').lower()
 
         # Parte de somar  
         if pergunta == 'soma' :
