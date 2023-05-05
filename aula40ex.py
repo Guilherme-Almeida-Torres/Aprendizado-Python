@@ -9,47 +9,48 @@ while True:
     numeros_validos = None
     
     try:
-        numero_1_int = float(numero_1)
-        numero_2_int = float(numero_2)
+        numero_1_float = float(numero_1)
+        numero_2_float = float(numero_2)
         numeros_validos = True
     except:
         numeros_validos = None
         
     if numeros_validos is None:
         print('Um ou os dois valores digitados são invalidos')
+        print("\n")
         continue
 
 
     # Parte de somar  
-    if pergunta == 'soma' :
-            soma = numero_1_int + numero_2_int
-            print(f'A soma e de {soma}')
-    if pergunta == '+':
-            soma = numero_1_int + numero_2_int
-            print(f'A soma e de {soma}')
+    elif pergunta == 'soma' :
+            soma = numero_1_float + numero_2_float
+            print(f'A soma é de {soma}')
+    elif pergunta == '+':
+            soma = numero_1_float + numero_2_float
+            print(f'A soma é de {soma}')
 
     # Parte de subtração
-    if pergunta == 'subtração' or pergunta == 'subtracao' or pergunta == 'subitração' or pergunta == 'subitracao':
-            subtracao = numero_1_int - numero_2_int
+    elif pergunta == 'subtração' or pergunta == 'subtracao' or pergunta == 'subitração' or pergunta == 'subitracao':
+            subtracao = numero_1_float - numero_2_float
             print(f'A subtração é {subtracao}')
-    if pergunta == '-':
-            subtracao = numero_1_int - numero_2_int
+    elif pergunta == '-':
+            subtracao = numero_1_float - numero_2_float
             print(f'A subtração é {subtracao}')
 
     # Parte de multiplicação
-    if pergunta ==  'multiplicacao' or pergunta == 'multiplicação':
-            multiplicacao = numero_1_int * numero_2_int
+    elif pergunta ==  'multiplicacao' or pergunta == 'multiplicação':
+            multiplicacao = numero_1_float * numero_2_float
             print(f'A multiplicação é {multiplicacao}')
-    if pergunta == '*':
-            multiplicacao = numero_1_int * numero_2_int
+    elif pergunta == '*':
+            multiplicacao = numero_1_float * numero_2_float
             print(f'A multiplicação é {multiplicacao}')
 
     # Parte da divisão
-    if pergunta ==  'divisão' or pergunta == 'divisao':
-            divisao = numero_1_int / numero_2_int
+    elif pergunta ==  'divisão' or pergunta == 'divisao':
+            divisao = numero_1_float / numero_2_float
             print(f'A divisão é {divisao}')
-    if pergunta == '/':
-            divisao = numero_1_int / numero_2_int
+    elif pergunta == '/':
+            divisao = numero_1_float / numero_2_float
             print(f'A divisão é {divisao}')
 
 
@@ -58,6 +59,6 @@ while True:
     print('Para continuar aperte [enter]')
     print('')
     sair = input('Para sair digite [s]').lower().startswith('s')
-    #print(sair)
+
     if sair is True:
         break
